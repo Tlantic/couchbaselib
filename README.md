@@ -95,6 +95,14 @@ exports = module.exports = couchbaselib.model('User', userSchema, 'default', met
 - update: function(id, data, callback);
 - remove: function(id, callback)
 
+### Init a Model
+
+On start app
+
+```javascript
+require('../application/user.model');
+```
+
 ###Example
 
 ```javascript
@@ -200,7 +208,7 @@ viewQueryOptions:{
 
 Example:
 
-```
+```javascript
 DB.getN1qlQuery('default', "SELECT * FROM bee where type='user'", function (err, result) {
 		if (err) {
 			cb(err);
