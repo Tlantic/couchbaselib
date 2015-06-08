@@ -110,7 +110,7 @@ var user = new User({firstname:'John', lastname:"Doe"});
 	user.save(function(err, data){
 		if(err)
 			res.send(err);
-		User.print();
+		User.getRefreshToken();
 		User.findById('default', data._type ,data._uId ,function(err, data){
 			httpResponse.success(data, res);
 		});
