@@ -81,6 +81,10 @@ var methods = {
 
 exports = module.exports = couchbaselib.model('User', userSchema, 'default', methods);
 ```
+### Model
+
+couchbaselib.model(Name, Schema, bucketName, Methods);
+
 
 ### Model - fields created by default
 - _uId: uuid.v4()
@@ -106,6 +110,8 @@ require('../application/user.model');
 ###Example
 
 ```javascript
+var User = couchbaselib.get('User');
+
 var user = new User({firstname:'John', lastname:"Doe"});
 	user.save(function(err, data){
 		if(err)
