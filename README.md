@@ -22,7 +22,6 @@ Example:
 
 ```javascript
 DB.initConnection(config.db.host);
-);
 ```
 
 ### getBucket(bucketName, callback) - Check if bucket exist
