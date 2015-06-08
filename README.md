@@ -82,20 +82,20 @@ var methods = {
 exports = module.exports = couchbaselib.model('User', userSchema, 'default', methods);
 ```
 
-Model create by default
-_uId: uuid.v4()
-_type: document type (ex: user)
-_createDate: unix date format
-_updateDate: unix date format
+### Model create fields by default
+- _uId: uuid.v4()
+- _type: document type (ex: user)
+- _createDate: unix date format
+- _updateDate: unix date format
 
 ### Model default functions
 
-findById: function(bucket, key, cb);
-save: function(callback);
-update: function(id, data, callback);
-remove: function(id, callback)
+- findById: function(bucket, key, cb);
+- save: function(callback);
+- update: function(id, data, callback);
+- remove: function(id, callback)
 
-Example
+###Example
 
 ```javascript
 var user = new User({firstname:'John', lastname:"Doe"});
