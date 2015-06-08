@@ -6,12 +6,21 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Andre Pinto",
+  "author": {
+    "name": "Andre Pinto"
+  },
   "license": "ISC",
   "dependencies": {
-    "couchbase":"2.0.8",
-    "uuid":"^2.0.1",
-    "async":"^1.1.0",
-    "jjv":"^1.0.2"
-  }
+    "couchbase": "2.0.8",
+    "uuid": "^2.0.1",
+    "async": "^1.1.0",
+    "jjv": "^1.0.2"
+  },
+  "gitHead": "c12e3233e61905464b4de8497e7ded0805444f86",
+  "readme": "couchbaselib\r\n=================\r\n\r\nNodejs Couchbase Module\r\n\r\n\r\n## include module  ##\r\n\r\n```\r\nnpm install \"git+https://github.com/Tlantic/couchbaselib.git#master\"\r\n```\r\n\r\n```\r\nvar DB = require('couchbaselib');\r\n````\r\n\r\n### init (endpoint)\r\n\r\nExample:\r\n\r\n```\r\nDB.initConnection(config.db.host);\r\n);\r\n```\r\n\r\n### insert(bucketName, key, data, cb)\r\n\r\nExample:\r\n\r\n```\r\nDB.insert(bucketName, key, data, function(err, result, retriveDocument) {\r\n\t  if (err) \r\n            cb(err);\r\n\t   \r\n    \tcb(null, result);\r\n    }, true);\r\n\t\r\n```\r\n\r\n### update(bucketName, key, data, cb, retriveDocument)\r\n\r\nExample:\r\n\r\n```\r\nDB.update(bucketName, key, data, function(err, result) {\r\n\t  if (err) \r\n            cb(err);\r\n\r\n    \tcb(null, result);\r\n    }, true);\r\n\t\r\n```\r\n### remove(bucketName, key, cb)\r\n\r\nExample:\r\n\r\n```\r\nDB.remove(bucketName, key, function(err, result) {\r\n\t  if (err) \r\n            cb(err);\r\n\t   \r\n    \tcb(null, result);\r\n    }, true);\r\n```\r\n\r\n### get(bucketName, key, cb)\r\n\r\nExample:\r\n\r\n```\r\nDB.get(bucketName, key, function(err, result) {\r\n\t  if (err) \r\n            cb(err);\r\n\t   \r\n    \tcb(null, result);\r\n    });\r\n```\r\n\r\n### query(bucketName, design, view, cb, options)\r\n\r\nExample:\r\n\r\n```\r\nDB.query('default', 'dev_user', 'by_type', function (err, result) {\r\n\t\tif (err){\r\n\t\t\tcb(err);\r\n\t\t}\r\n\t\tcb(null, result);\r\n\t});\r\n```\r\n```\r\nviewQueryOptions:{\r\n\t\tstale: couchbase.ViewQuery.Update.BEFORE,\r\n\t\tskip : null,\r\n\t\tlimit : null,\r\n\t\torder : null,\r\n\t\treduce : null,\r\n\t\tgroup : null,\r\n\t\tgroup_level  : null,\r\n\t\tkey : null,\r\n\t\tkeys : null,\r\n\t\trange : null,   //{start:0, end:10, inclusive_end:true} Specifies a range of keys to retrieve from the index.\r\n\t\tid_range : null, //{start:0, end:10} Specifies a range of document id's to retrieve from the index.\r\n\t\tinclude_docs : null, //Flag to request a view request include the full document value.\r\n\t\tfull_set : null //Flag to request a view request accross all nodes in the case of\r\n\t}\r\n```\r\n\r\n\r\n### getN1qlQuery(bucketName, query, cb)\r\n\r\nExample:\r\n\r\n```\r\nDB.getN1qlQuery('default', \"SELECT * FROM bee where type='user'\", function (err, result) {\r\n\t\tif (err) {\r\n\t\t\tcb(err);\r\n\t\t}\r\n\t\tcb(null, result);\r\n\t});\r\n```\r\n\r\n",
+  "readmeFilename": "README.md",
+  "_id": "couchbaselib@0.0.1",
+  "_shasum": "ea4b7ea7235f75de654ebea98f3b25b5144bf0f4",
+  "_from": "git+https://github.com/Tlantic/couchbaselib.git#master",
+  "_resolved": "git+https://github.com/Tlantic/couchbaselib.git#c12e3233e61905464b4de8497e7ded0805444f86"
 }
