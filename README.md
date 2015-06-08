@@ -82,7 +82,7 @@ var methods = {
 exports = module.exports = couchbaselib.model('User', userSchema, 'default', methods);
 ```
 
-### Model create fields by default
+### Model - fields created by default
 - _uId: uuid.v4()
 - _type: document type (ex: user)
 - _createDate: unix date format
