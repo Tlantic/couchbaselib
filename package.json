@@ -1,6 +1,6 @@
 {
   "name": "couchbaselib",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "couchbase node js",
   "main": "index.js",
   "scripts": {
