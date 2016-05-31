@@ -11,9 +11,10 @@
   },
   "license": "ISC",
   "dependencies": {
-    "couchbase": "2.1.2",
-    "uuid": "^2.0.1",
     "async": "^1.1.0",
-    "jjv": "^1.0.2"
+    "couchbase": "2.1.6",
+    "jjv": "^1.0.2",
+    "lodash": "^4.13.1",
+    "uuid": "^2.0.1"
   }
 }
