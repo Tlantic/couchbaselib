@@ -1,6 +1,6 @@
 {
   "name": "couchbaselib",
-  "version": "1.1.11",
+  "version": "2.0.0",
   "description": "couchbase node js",
   "main": "index.js",
   "scripts": {
@@ -11,10 +11,13 @@
   },
   "license": "ISC",
   "dependencies": {
-    "async": "^1.1.0",
-    "couchbase": "2.1.6",
-    "jjv": "^1.0.2",
-    "lodash": "^4.13.1",
-    "uuid": "^2.0.1"
+    "ajv": "^4.7.0",
+    "async": "2.0.1",
+    "couchbase": "2.2.2",
+    "lodash": "4.15.0",
+    "uuid": "2.0.2"
+  },
+  "devDependencies": {
+    "jsdoc": "^3.4.1"
   }
 }
