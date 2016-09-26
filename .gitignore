@@ -2,3 +2,7 @@
 
 #WebStorm IDE#
 .idea
+
+#jsdoc"
+out/
+docs/
