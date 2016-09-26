@@ -4,7 +4,8 @@
 'use strict';
 
 const
-	CouchBaseEnvironment  = require('./lib/environment');
+	couchbase   = require('couchbase'),
+	CouchBaseEnvironment  = require('./lib/environment')(couchbase);
 
 
 module.exports = new CouchBaseEnvironment();
