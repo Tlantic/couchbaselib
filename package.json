@@ -18,6 +18,8 @@
     "uuid": "2.0.2"
   },
   "devDependencies": {
-    "jsdoc": "^3.4.1"
+    "chai": "^3.5.0",
+    "jsdoc": "^3.4.1",
+    "mocha": "^3.0.2"
   }
 }
