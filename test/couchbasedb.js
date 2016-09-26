@@ -228,7 +228,8 @@ describe( 'CouchbaseDB', function () {
 					extent = ' bar',
 					docKey = "user::7c3cb8c2-23eb-40d1-bdc4-656211162fad";
 
-				cluster.insert('default', docKey, base, ( error, result ) => {
+				cluster.insert('default', docKey, base, ( error ) => {
+					expect(error).to.not.exist;
 					cluster.append('default', docKey, extent, ( error, result ) => {
 						expect(error).to.not.exist;
 						expect(result.value).to.be.equal(base+extent);
